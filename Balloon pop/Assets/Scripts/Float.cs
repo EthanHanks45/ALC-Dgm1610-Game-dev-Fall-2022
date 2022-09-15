@@ -17,6 +17,7 @@ public class Float : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Destroy balloon after it passes upperbound
         transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
         if(transform.position.y > upperBound)
         {

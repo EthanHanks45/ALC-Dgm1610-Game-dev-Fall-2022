@@ -6,14 +6,18 @@ public class Balloon : MonoBehaviour
 {
     public int scoreToGive = 100;
 
-    public int clickToPop = 3;
+    public int clickToPop = 3;// How many clicks before balloon pops
 
-    public float scaleToIncrease = 0.10f;
+    public float scaleToIncrease = 0.10f;// Scale to increase each time the balloon is clicked
+
+
+   private 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        //Refrence ScoreManager Component
+       
     }
 
     // Update is called once per frame
@@ -25,6 +29,7 @@ public class Balloon : MonoBehaviour
 
         if (clickToPop == 0)
         {
+            
             Destroy(gameObject);
         }
     }
