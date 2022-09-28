@@ -7,10 +7,12 @@ public class Float : MonoBehaviour
     public float moveSpeed = 1.0f;
     public float upperBound = 25.0f;
     private Balloon balloon;
-     
+    public ScoreManager scoreManager;
+
     // Start is called before the first frame update
     void Start()
     {
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
         balloon = GetComponent<Balloon>();
     }
 
@@ -21,6 +23,7 @@ public class Float : MonoBehaviour
         transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
         if(transform.position.y > upperBound)
         {
+            scoreManager.DecreaseScoreText(balloon.scoreToGive);
             Destroy(gameObject);
         }
     }

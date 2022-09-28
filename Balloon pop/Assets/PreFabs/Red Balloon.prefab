@@ -306,6 +306,7 @@ MonoBehaviour:
   scoreToGive: 500
   clickToPop: 1
   scaleToIncrease: 0.1
+  scoreManager: {fileID: 0}
 --- !u!114 &6120044204829061074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,3 +321,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   upperBound: 25
+  scoreManager: {fileID: 0}
