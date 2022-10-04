@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
    public float speed; // How fast the player moves
-   public float hInput;// Horizontial Input
+   public float hInput;// Horizontal Input
    public float vInput;// Vertical Input
    
     // Start is called before the first frame update
@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        hInput = Input.GetAxis("Horizontial");
+        hInput = Input.GetAxis("Horizontal");
         vInput = Input.GetAxis("Vertical");
         transform.Translate(Vector2.right * hInput * speed * Time.deltaTime);// Moves player Right and Left
         transform.Translate(Vector2.up * vInput * speed * Time.deltaTime);// Moves player left and right
