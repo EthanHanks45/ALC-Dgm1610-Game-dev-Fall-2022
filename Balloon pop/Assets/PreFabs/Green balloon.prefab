@@ -208,8 +208,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreToGive: 1000
-  clickToPop: 1
+  clickToPop: 5
   scaleToIncrease: 0.1
+  scoreManager: {fileID: 0}
 --- !u!114 &5668274819180100277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,6 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   upperBound: 25
+  scoreManager: {fileID: 0}
 --- !u!1 &5668274819695869732
 GameObject:
   m_ObjectHideFlags: 0

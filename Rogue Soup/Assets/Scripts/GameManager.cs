@@ -5,21 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public int key;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void AddKey(int amount)
     {
         key += amount;// adds keys
-        print("Keys = "+ key);// print message showing how many keys we have in inventory
+        Debug.Log("Keys = "+ key);// print a message showing how many keys we have in inventory
     }
 }

@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreToGive: 500
-  clickToPop: 1
+  clickToPop: 3
   scaleToIncrease: 0.1
   scoreManager: {fileID: 0}
 --- !u!114 &6120044204829061074
