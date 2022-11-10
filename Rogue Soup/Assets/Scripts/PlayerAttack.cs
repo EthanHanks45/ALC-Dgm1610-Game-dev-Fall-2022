@@ -17,11 +17,11 @@ public class PlayerAttack : MonoBehaviour
         {
             if(Input.GetKey(KeyCode.Space))
             {
-                Collider2D[] eneimiesToDamage = Physics2D.OverlapCircleAll(attack.position, attackRange, whatIsEnimies);
+                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnimies);
 
-                for(int i = 0; i < eneimiesToDamage.Length; i++)
+                for(int i = 0; i < enemiesToDamage.Length; i++)
                 {
-                    eneimiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+                    enemiesToDamage[i].GetComponent<EnemyHealth>().TakeDamage(damage);
                 }
             }
             attackDelay = startDelay;
@@ -34,7 +34,7 @@ public class PlayerAttack : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPos.position, attackRange);

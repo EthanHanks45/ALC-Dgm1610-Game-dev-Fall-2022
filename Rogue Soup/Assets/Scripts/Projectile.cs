@@ -37,6 +37,10 @@ public class Projectile : MonoBehaviour
             playerHealth.TakeDamage(damage);
             DestroyProjectile();
         }
+        if(other.CompareTag("Temple wall"))
+        {
+            DestroyProjectile();
+        }
     }
 
     void DestroyProjectile()
