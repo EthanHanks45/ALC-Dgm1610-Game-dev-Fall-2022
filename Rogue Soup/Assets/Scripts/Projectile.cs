@@ -5,7 +5,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public float speed;
-    public int damage;
+    public int damage = 1;
     
     private Transform player;
     private Vector2 target;
@@ -35,10 +35,6 @@ public class Projectile : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             playerHealth.TakeDamage(damage);
-            DestroyProjectile();
-        }
-        if(other.CompareTag("Temple wall"))
-        {
             DestroyProjectile();
         }
     }
