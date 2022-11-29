@@ -11,11 +11,11 @@ public class PlayerAttack : MonoBehaviour
     public int damage;
     private float attackDelay;
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
         if(attackDelay <= 0)
         {
-            if(Input.GetKey(KeyCode.F))
+            if(Input.GetKey(KeyCode.Space))
             {
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnimies);
 
